@@ -6,7 +6,7 @@ A paper about this dataset with an evaluation is in the making, please cite the 
 ```bibtex
 @misc{
 title="Multimodal Thermal Arctic Winter Dataset",
-author="Stubenvoll, Charlotte and Janaka, Sohan",
+author="Stubenvoll, Charlotte and Janaka, M. W. Sohan",
 url="https://github.com/Lapland-Robotics/AI.R-Multimodal_Thermal_Dataset",
 }
 ```
