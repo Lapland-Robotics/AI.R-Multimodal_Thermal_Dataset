@@ -15,10 +15,12 @@ url="https://github.com/Lapland-Robotics/AI.R-Multimodal_Thermal_Dataset",
 ```
 
 ## Description
-The data is in the "Multimodal Arctic Winter Thermal Dataset" folder. Each snapshot of data is named after the time of creation and contains four files, one thermal image (.png), two rgb images from the stereo camera (each .png) and a lidar pointcloud (.pcd):
+The dataset consists of snapshots of sensors of a mobile robot: Thermal camera, stereo camera and 3D-lidar. 
+
+
+## Orientation
+The data is in the "Multimodal Arctic Winter Thermal Image Dataset" folder. Each snapshot of data is named after the time of creation and contains four files, one thermal image (.png), two rgb images from the stereo camera (each .png) and a lidar pointcloud (.pcd):
 <img width="566" height="608" alt="image" src="https://github.com/user-attachments/assets/49aeecda-6fa9-4f2e-8582-b0d6f8dce23d" />
-
-
 
 
 ## License
