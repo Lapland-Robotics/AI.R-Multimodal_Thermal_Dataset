@@ -6,18 +6,19 @@ from collections import Counter
 import logging
 import torch
 from torchvision import ops
+from collections import Counter
 
 logging.getLogger("ultralytics").setLevel(logging.ERROR)
 model = YOLO('yolov8n.pt')  # or yolov8s.pt, yolov8m.pt, etc.
 
 def analyze_rgb_image(image_path):
-    results = model(image_path)  # or use a numpy array
+    results = model(image_path)
     # print_summary(results, image_path)
     return results
 
 def analyze_thermal_image(image_path):
     img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
-    img_rgb = cv2.cvtColor(img, cv2.COLOR_GRAY2RGB)  # pseudo-color for YOLO
+    img_rgb = cv2.cvtColor(img, cv2.COLOR_GRAY2RGB)
     results = model(img_rgb)
     # print_summary(results, image_path)
     return results
@@ -39,6 +40,7 @@ def print_summary(yolo_result, image_path):
 
 def readfile(file_path):
     result = {}
+    baseline_count = 0
     try:
         with open(file_path, 'r') as file:
             for line in file:
@@ -49,25 +51,49 @@ def readfile(file_path):
                     
                     if cls not in result:
                         result[cls] = []
-                    result[cls].append(tensor)
+                    result[cls].append(xywhn)
+                    baseline_count += 1
 
     except FileNotFoundError:
         print(f"Error: File '{file_path}' not found.")
     except IOError as e:
         print(f"Error reading file '{file_path}': {e}")
-    return result
+    return result, baseline_count
+
+def xywhn_to_xyxy_tensor(xywhn, img_width, img_height):
+
+    # print(f"xywhn: {xywhn} img_width: {img_width}, img_height: {img_height}")
+    cx, cy, w, h = xywhn
+    cx *= img_width
+    cy *= img_height
+    w *= img_width
+    h *= img_height
+    # print(f"cx: {cx}, cy: {cy}, w: {w}, h: {h}")
+
+    x1 = cx - w / 2.0
+    y1 = cy - h / 2.0
+    x2 = cx + w / 2.0
+    y2 = cy + h / 2.0
+
+    return torch.tensor([[x1, y1, x2, y2]], dtype=torch.float32, device='cuda:0')
 
 def compare(base_line, prediction):
-
+    height, width = prediction[0].orig_shape
     for key in base_line:
-        print(f"Key: {key}")
         for val in base_line[key]:
-            print(f"  Value: {val}")
-    # print("prediction : ")
-    # print(prediction[0].boxes.xyxy)
+            baseline_box = xywhn_to_xyxy_tensor(val, width, height)
+            prediction_box = prediction[0].boxes.xyxy[0].unsqueeze(0)
+            iou = ops.box_iou(baseline_box, prediction_box)
+            print('IOU : ', iou)
 
     # iou = ops.box_iou(ground_truth_bbox, prediction_bbox)
     # print('IOU : ', iou.numpy()[0][0])
+
+def getFilteredCount(predictions, condition=lambda x: x is not None):
+    boxes = predictions[0].boxes
+    target_classes = [0, 2, 5]
+    count = sum(1 for cls in boxes.cls if int(cls) in target_classes)
+    return count
 
 def main():
     data_dir = os.path.join(os.path.dirname(__file__), 'exemplary_subset_labeled', 'darkness')
@@ -76,13 +102,17 @@ def main():
     for folder in folder_list:
         print(f"Processing folder: {folder}")
         path = data_dir+"/"+folder+"/scaled_left_rgb"
-        base_line_rgb = readfile(path+".txt")
+        base_line_rgb, baseline_count_rgb = readfile(path+".txt")
         predict_rgb = analyze_rgb_image(path+".jpg")
-        compare(base_line_rgb, predict_rgb)
+        predict_count_rgb = getFilteredCount(predict_rgb)
+        print(f"RGB Predicted count: {predict_count_rgb}, Baseline count: {baseline_count_rgb}")
+        # compare(base_line_rgb, predict_rgb)
 
         path = data_dir+"/"+folder+"/thermal"
-        base_line_thermal = readfile(path+".txt")
+        base_line_thermal, baseline_count_thermal = readfile(path+".txt")
         predict_thermal = analyze_thermal_image(path+".jpg")
+        predict_count_thermal = getFilteredCount(predict_thermal)
+        print(f"thermal Predicted count: {predict_count_thermal}, Baseline count: {baseline_count_thermal}")
         # compare(base_line_thermal, predict_thermal)
         print("--------------------------------------------------\n")
 
