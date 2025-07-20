@@ -112,7 +112,7 @@ def compare(base_line, prediction):
 
 def getFilteredCount(predictions, condition=lambda x: x is not None):
     boxes = predictions[0].boxes
-    target_classes = [0, 2, 5]
+    target_classes = [0, 2, 5, 7]
     count = sum(1 for cls in boxes.cls if int(cls) in target_classes)
     return count
 
