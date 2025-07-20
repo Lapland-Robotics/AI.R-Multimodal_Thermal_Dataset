@@ -29,7 +29,7 @@ def print_summary(yolo_result, image_path):
     class_ids = yolo_result[0].boxes.cls.cpu().numpy().astype(int)  # get class IDs of detections
     counts = Counter([class_names[i] for i in class_ids])
     summary = ', '.join(f"{v} {k}{'s' if v > 1 else ''}" for k, v in counts.items())
-    print(f"Summary for {image_path}: {summary}")
+    # print(f"Summary for {image_path}: {summary}")
 
     # result_img = yolo_result[0].plot()
     # image_dir = os.path.dirname(image_path)
@@ -99,19 +99,18 @@ def compare(base_line, prediction):
                 baseline_box = xywhn_to_xyxy_tensor(val, width, height)
                 best_iou = 0
                 best_prediction = None
-                for pred in prediction_list:
-                    if pred.cls == key:
-                        iou_tensor = ops.box_iou(baseline_box, pred.box.unsqueeze(0))
+                for i in range(len(prediction_list)):
+                    if prediction_list[i].cls == key:
+                        iou_tensor = ops.box_iou(baseline_box, prediction_list[i].box.unsqueeze(0))
                         iou = iou_tensor.item()  # Convert to scalar
                         if iou > 0.5 and iou > best_iou:
                             best_iou = iou
-                            best_prediction = pred
+                            best_prediction = prediction_list[i]
+                            prediction_list[i].iou = iou 
 
-                print(f"class {key} box {baseline_box} IOU: {best_iou}")
-                print(f"matched prediction: {best_prediction}")
+                print(f"\t\t class {key}, box {baseline_box.squeeze().cpu().numpy().tolist()}, IOU: {best_iou:.4f}".expandtabs(4))
+                print(f"\t\t matched prediction: {best_prediction}".expandtabs(4))
 
-    # iou = ops.box_iou(ground_truth_bbox, prediction_bbox)
-    # print('IOU : ', iou.numpy()[0][0])
 
 def getFilteredCount(predictions, condition=lambda x: x is not None):
     boxes = predictions[0].boxes
@@ -129,14 +128,14 @@ def main():
         base_line_rgb, baseline_count_rgb = readfile(path+".txt")
         predict_rgb = analyze_rgb_image(path+".jpg")
         predict_count_rgb = getFilteredCount(predict_rgb)
-        print(f"RGB Predicted count: {predict_count_rgb}, Baseline count: {baseline_count_rgb}")
+        print(f"\t RGB Predicted count: {predict_count_rgb}, Baseline count: {baseline_count_rgb}".expandtabs(4))
         compare(base_line_rgb, predict_rgb)
 
         path = data_dir+"/"+folder+"/thermal"
         base_line_thermal, baseline_count_thermal = readfile(path+".txt")
         predict_thermal = analyze_thermal_image(path+".jpg")
         predict_count_thermal = getFilteredCount(predict_thermal)
-        print(f"thermal Predicted count: {predict_count_thermal}, Baseline count: {baseline_count_thermal}")
+        print(f"\t thermal Predicted count: {predict_count_thermal}, Baseline count: {baseline_count_thermal}".expandtabs(4))
         compare(base_line_thermal, predict_thermal)
         print("--------------------------------------------------\n")
 
