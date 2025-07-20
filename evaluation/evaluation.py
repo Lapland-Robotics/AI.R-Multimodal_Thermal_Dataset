@@ -1,5 +1,6 @@
 import os
 import cv2
+from MyPrediction import MyPredictionClass
 from ultralytics import YOLO
 from PIL import Image
 from collections import Counter
@@ -46,6 +47,8 @@ def readfile(file_path):
             for line in file:
                     parts = line.strip().split()
                     cls = int(parts[0])
+                    if cls == 1:
+                        cls = 0
                     xywhn = [float(v) for v in parts[1:5]]
                     tensor = torch.tensor([xywhn], dtype=torch.float32)
                     
@@ -58,6 +61,7 @@ def readfile(file_path):
         print(f"Error: File '{file_path}' not found.")
     except IOError as e:
         print(f"Error reading file '{file_path}': {e}")
+    
     return result, baseline_count
 
 def xywhn_to_xyxy_tensor(xywhn, img_width, img_height):
@@ -79,12 +83,32 @@ def xywhn_to_xyxy_tensor(xywhn, img_width, img_height):
 
 def compare(base_line, prediction):
     height, width = prediction[0].orig_shape
-    for key in base_line:
-        for val in base_line[key]:
-            baseline_box = xywhn_to_xyxy_tensor(val, width, height)
-            prediction_box = prediction[0].boxes.xyxy[0].unsqueeze(0)
-            iou = ops.box_iou(baseline_box, prediction_box)
-            print('IOU : ', iou)
+    prediction_list = []
+    abc = prediction[0].boxes
+    for cls, box, score in zip(abc.cls, abc.xyxy, abc.conf):
+        obj = MyPredictionClass(
+            cls=int(cls.item()),
+            box=box,
+            score=score.item()
+        )
+        prediction_list.append(obj)
+    
+    if base_line and prediction_list:
+        for key in base_line:
+            for val in base_line[key]:
+                baseline_box = xywhn_to_xyxy_tensor(val, width, height)
+                best_iou = 0
+                best_prediction = None
+                for pred in prediction_list:
+                    if pred.cls == key:
+                        iou_tensor = ops.box_iou(baseline_box, pred.box.unsqueeze(0))
+                        iou = iou_tensor.item()  # Convert to scalar
+                        if iou > 0.5 and iou > best_iou:
+                            best_iou = iou
+                            best_prediction = pred
+
+                print(f"class {key} box {baseline_box} IOU: {best_iou}")
+                print(f"matched prediction: {best_prediction}")
 
     # iou = ops.box_iou(ground_truth_bbox, prediction_bbox)
     # print('IOU : ', iou.numpy()[0][0])
@@ -106,14 +130,14 @@ def main():
         predict_rgb = analyze_rgb_image(path+".jpg")
         predict_count_rgb = getFilteredCount(predict_rgb)
         print(f"RGB Predicted count: {predict_count_rgb}, Baseline count: {baseline_count_rgb}")
-        # compare(base_line_rgb, predict_rgb)
+        compare(base_line_rgb, predict_rgb)
 
         path = data_dir+"/"+folder+"/thermal"
         base_line_thermal, baseline_count_thermal = readfile(path+".txt")
         predict_thermal = analyze_thermal_image(path+".jpg")
         predict_count_thermal = getFilteredCount(predict_thermal)
         print(f"thermal Predicted count: {predict_count_thermal}, Baseline count: {baseline_count_thermal}")
-        # compare(base_line_thermal, predict_thermal)
+        compare(base_line_thermal, predict_thermal)
         print("--------------------------------------------------\n")
 
 
