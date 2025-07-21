@@ -8,6 +8,7 @@ import logging
 import torch
 from torchvision import ops
 from collections import Counter
+import csv
 
 logging.getLogger("ultralytics").setLevel(logging.ERROR)
 model = YOLO('yolov8n.pt')  # or yolov8s.pt, yolov8m.pt, etc.
@@ -47,8 +48,6 @@ def readfile(file_path):
             for line in file:
                     parts = line.strip().split()
                     cls = int(parts[0])
-                    if cls == 1:
-                        cls = 0
                     xywhn = [float(v) for v in parts[1:5]]
                     tensor = torch.tensor([xywhn], dtype=torch.float32)
                     
@@ -79,10 +78,14 @@ def xywhn_to_xyxy_tensor(xywhn, img_width, img_height):
 
     return torch.tensor([[x1, y1, x2, y2]], dtype=torch.float32, device='cuda:0')
 
-def compare(base_line, prediction):
+def compare(base_line, prediction, baseline_count):
     height, width = prediction[0].orig_shape
     prediction_list = []
     abc = prediction[0].boxes
+    total_iou = 0.0
+    avarage_iou = 0.0
+    matched_predictions = 0
+
     for cls, box, score in zip(abc.cls, abc.xyxy, abc.conf):
         obj = MyPredictionClass(
             cls=int(cls.item()),
@@ -105,10 +108,15 @@ def compare(base_line, prediction):
                             best_iou = iou
                             best_prediction = prediction_list[i]
                             prediction_list[i].iou = iou 
+                            total_iou = total_iou + iou
+                            matched_predictions = matched_predictions + 1
 
                 print(f"\t\t class {key}, box {baseline_box.squeeze().cpu().numpy().tolist()}, IOU: {best_iou:.4f}".expandtabs(4))
                 print(f"\t\t matched prediction: {best_prediction}".expandtabs(4))
-
+    if total_iou > 0 and baseline_count > 0:
+        avarage_iou = total_iou / baseline_count
+    
+    return avarage_iou, matched_predictions, len(prediction_list)
 
 def getFilteredCount(predictions, condition=lambda x: x is not None):
     boxes = predictions[0].boxes
@@ -119,25 +127,31 @@ def getFilteredCount(predictions, condition=lambda x: x is not None):
 def main():
     data_dir = os.path.join(os.path.dirname(__file__), 'exemplary_subset_labeled')
     folder_list = os.listdir(data_dir)
+    header = ['folder', 'avarage_rgb_iou', 'avarage_thermal_iou']
+    rows = []
 
     for folder in folder_list:
         print(f"Processing folder: {folder}")
-
         path = data_dir+"/"+folder+"/scaled_left_rgb"
         base_line_rgb, baseline_count_rgb = readfile(path+".txt")
         predict_rgb = analyze_rgb_image(path+".jpg")
         predict_count_rgb = getFilteredCount(predict_rgb)
         print(f"\t RGB Predicted count: {predict_count_rgb}, Baseline count: {baseline_count_rgb}".expandtabs(4))
-        compare(base_line_rgb, predict_rgb)
+        avarage_rgb_iou, matched_rgb_predictions, baseline  = compare(base_line_rgb, predict_rgb, baseline_count_rgb)
 
         path = data_dir+"/"+folder+"/thermal"
         base_line_thermal, baseline_count_thermal = readfile(path+".txt")
         predict_thermal = analyze_rgb_image(path+".jpg")
         predict_count_thermal = getFilteredCount(predict_thermal)
         print(f"\t thermal Predicted count: {predict_count_thermal}, Baseline count: {baseline_count_thermal}".expandtabs(4))
-        compare(base_line_thermal, predict_thermal)
-        print("---------------------------------------------------------------------------\n")
+        avarage_thermal_iou, matched_thermal_predictions, baseline = compare(base_line_thermal, predict_thermal, baseline_count_thermal)
+        rows.append([folder, avarage_rgb_iou, avarage_thermal_iou])
+        # print("---------------------------------------------------------------------------\n")
 
+    with open('average_iou.csv', 'w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(header)  # write the header
+        writer.writerows(rows)   # write multiple rows
 
 if __name__ == "__main__":
     main()
