@@ -31,13 +31,13 @@ def save_image(yolo_result, image_path):
     summary = ', '.join(f"{v} {k}{'s' if v > 1 else ''}" for k, v in counts.items())
     # print(f"Summary : {summary}")
 
-    result_img = yolo_result[0].plot()
-    image_dir = os.path.dirname(image_path)
-    image_filename = os.path.basename(image_path)
-    base_name, _ = os.path.splitext(image_filename)
-    custom_name = base_name + "_obj_detected.jpg"
-    save_path = os.path.join(image_dir, custom_name)
-    cv2.imwrite(save_path, result_img)
+    # result_img = yolo_result[0].plot()
+    # image_dir = os.path.dirname(image_path)
+    # image_filename = os.path.basename(image_path)
+    # base_name, _ = os.path.splitext(image_filename)
+    # custom_name = base_name + "_obj_detected.jpg"
+    # save_path = os.path.join(image_dir, custom_name)
+    # cv2.imwrite(save_path, result_img)
 
 def readfile(file_path):
     result = {}
