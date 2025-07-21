@@ -1,6 +1,8 @@
-Processing folder: 2025-04-11_23-37-03-503442
+rocessing folder: 2025-04-11_23-37-03-503442
      RGB Predicted count: 0, Baseline count: 0
      thermal Predicted count: 0, Baseline count: 0
+---------------------------------------------------------------------------
+
 Processing folder: 2025-03-06_11-38-01-680185
      RGB Predicted count: 6, Baseline count: 5
          class 2, box [233.0, 83.0, 266.0, 104.0], IOU: 0.8464
@@ -13,31 +15,59 @@ Processing folder: 2025-03-06_11-38-01-680185
          matched prediction: (detected object (box=[182.55455017089844, 86.68479919433594, 227.25442504882812, 102.29618835449219], score=0.6951, iou=0.7747)
          class 2, box [168.1199951171875, 86.57499694824219, 189.05999755859375, 100.06500244140625], IOU: 0.5414
          matched prediction: (detected object (box=[167.49920654296875, 88.13557434082031, 182.71458435058594, 98.86244201660156], score=0.3175, iou=0.5414)
-     thermal Predicted count: 0, Baseline count: 5
+     thermal Predicted count: 1, Baseline count: 5
+         class 2, box [281.0, 95.0, 319.0, 117.0], IOU: 0.0000
+         matched prediction: None
+         class 2, box [120.0, 88.0, 181.0, 117.0], IOU: 0.0000
+         matched prediction: None
+         class 2, box [53.0, 95.0, 104.0, 115.0], IOU: 0.6808
+         matched prediction: (detected object (box=[52.31623840332031, 96.451416015625, 92.23405456542969, 115.91024780273438], score=0.4448, iou=0.6808)
+         class 2, box [222.30999755859375, 98.08499908447266, 277.69000244140625, 116.99500274658203], IOU: 0.0000
+         matched prediction: None
+         class 2, box [205.38499450683594, 99.625, 229.23500061035156, 115.07499694824219], IOU: 0.0000
+         matched prediction: None
+---------------------------------------------------------------------------
+
 Processing folder: 2025-04-02_15-29-56-680044
      RGB Predicted count: 0, Baseline count: 0
      thermal Predicted count: 0, Baseline count: 0
+---------------------------------------------------------------------------
+
 Processing folder: 2025-04-12_12-44-46-462563
      RGB Predicted count: 4, Baseline count: 2
          class 2, box [160.0, 77.0, 215.0, 104.0], IOU: 0.8897
          matched prediction: (detected object (box=[160.5265655517578, 79.0685806274414, 214.99607849121094, 104.75942993164062], score=0.7645, iou=0.8897)
          class 2, box [216.0, 75.0, 262.0, 97.0], IOU: 0.0000
          matched prediction: None
-     thermal Predicted count: 0, Baseline count: 2
+     thermal Predicted count: 2, Baseline count: 2
+         class 2, box [210.0, 90.0, 286.0, 128.0], IOU: 0.8851
+         matched prediction: (detected object (box=[208.72607421875, 90.85179138183594, 280.7391357421875, 127.57266235351562], score=0.4524, iou=0.8851)
+         class 2, box [269.6300048828125, 91.26000213623047, 316.7900085449219, 119.08000183105469], IOU: 0.0000
+         matched prediction: None
+---------------------------------------------------------------------------
+
 Processing folder: 2025-04-11_23-36-20-629734
      RGB Predicted count: 1, Baseline count: 1
          class 2, box [75.0, 87.0, 119.0, 106.0], IOU: 0.8454
          matched prediction: (detected object (box=[76.11813354492188, 89.21414184570312, 119.17647552490234, 106.28868103027344], score=0.6870, iou=0.8454)
      thermal Predicted count: 1, Baseline count: 1
-         class 2, box [92.0, 104.0, 144.0, 128.0], IOU: 0.9262
-         matched prediction: (detected object (box=[92.04899597167969, 104.51252746582031, 144.2806396484375, 129.2018585205078], score=0.6781, iou=0.9262)
+         class 2, box [92.0, 104.0, 144.0, 128.0], IOU: 0.9368
+         matched prediction: (detected object (box=[91.86961364746094, 104.49514770507812, 143.80628967285156, 128.93875122070312], score=0.6484, iou=0.9368)
+---------------------------------------------------------------------------
+
 Processing folder: 2025-03-20_13-52-23-853273
      RGB Predicted count: 2, Baseline count: 2
          class 2, box [0.0, 0.0, 114.0, 136.0], IOU: 0.0000
          matched prediction: None
          class 2, box [121.0, 65.0, 217.0, 109.0], IOU: 0.9371
          matched prediction: (detected object (box=[121.35433197021484, 67.28242492675781, 216.91751098632812, 109.3164291381836], score=0.8840, iou=0.9371)
-     thermal Predicted count: 0, Baseline count: 2
+     thermal Predicted count: 2, Baseline count: 2
+         class 2, box [101.0, 72.0, 221.0, 127.0], IOU: 0.8674
+         matched prediction: (detected object (box=[114.74554443359375, 71.59490203857422, 222.34912109375, 127.1815414428711], score=0.3797, iou=0.8674)
+         class 2, box [0.0, 43.0, 80.0, 158.0], IOU: 0.9649
+         matched prediction: (detected object (box=[0.03730010986328125, 44.1446533203125, 81.07669067382812, 159.39755249023438], score=0.7123, iou=0.9649)
+---------------------------------------------------------------------------
+
 Processing folder: 2025-04-12_12-37-14-101616
      RGB Predicted count: 1, Baseline count: 2
          class 2, box [116.0, 67.0, 226.0, 101.0], IOU: 0.9227
@@ -45,6 +75,8 @@ Processing folder: 2025-04-12_12-37-14-101616
          class 2, box [53.0, 94.0, 72.0, 107.0], IOU: 0.0000
          matched prediction: None
      thermal Predicted count: 0, Baseline count: 2
+---------------------------------------------------------------------------
+
 Processing folder: 2025-04-14_15-57-59-737140
      RGB Predicted count: 2, Baseline count: 4
          class 0, box [250.0, 0.0, 266.0, 153.0], IOU: 0.0000
@@ -55,59 +87,85 @@ Processing folder: 2025-04-14_15-57-59-737140
          matched prediction: (detected object (box=[0.1383378654718399, 72.59317016601562, 25.254085540771484, 117.2795639038086], score=0.7924, iou=0.8887)
          class 1, box [107.50499725341797, 95.05999755859375, 117.81500244140625, 112.80000305175781], IOU: 0.0000
          matched prediction: None
-     thermal Predicted count: 1, Baseline count: 4
-         class 0, box [285.0, 0.0, 319.0, 180.0], IOU: 0.9308
-         matched prediction: (detected object (box=[283.330810546875, 0.137603759765625, 319.8001708984375, 180.14987182617188], score=0.7337, iou=0.9308)
-         class 2, box [207.0, 82.0, 301.0, 148.0], IOU: 0.0000
-         matched prediction: None
+     thermal Predicted count: 2, Baseline count: 4
+         class 0, box [285.0, 0.0, 319.0, 180.0], IOU: 0.9608
+         matched prediction: (detected object (box=[284.49578857421875, 0.0, 319.86029052734375, 180.10693359375], score=0.6778, iou=0.9608)
+         class 2, box [207.0, 82.0, 301.0, 148.0], IOU: 0.8145
+         matched prediction: (detected object (box=[208.43414306640625, 82.39714050292969, 302.26971435546875, 160.45339965820312], score=0.4088, iou=0.8145)
          class 2, box [0.0, 82.0, 32.0, 140.0], IOU: 0.0000
          matched prediction: None
          class 1, box [130.3800048828125, 112.0, 143.4600067138672, 140.75999450683594], IOU: 0.0000
          matched prediction: None
+---------------------------------------------------------------------------
+
 Processing folder: 2025-04-12_12-40-02-738436
      RGB Predicted count: 1, Baseline count: 1
          class 2, box [170.0, 82.0, 234.0, 107.0], IOU: 0.8676
          matched prediction: (detected object (box=[170.8280487060547, 83.68243408203125, 234.24325561523438, 108.4532470703125], score=0.8663, iou=0.8676)
-     thermal Predicted count: 0, Baseline count: 1
+     thermal Predicted count: 1, Baseline count: 1
+         class 2, box [208.0, 98.0, 284.0, 129.0], IOU: 0.7731
+         matched prediction: (detected object (box=[220.62124633789062, 99.19097900390625, 284.7133483886719, 130.03890991210938], score=0.5364, iou=0.7731)
+---------------------------------------------------------------------------
+
 Processing folder: 2025-04-14_15-43-45-174888
      RGB Predicted count: 0, Baseline count: 0
      thermal Predicted count: 0, Baseline count: 0
+---------------------------------------------------------------------------
+
 Processing folder: 2025-04-12_12-37-20-663306
      RGB Predicted count: 1, Baseline count: 1
          class 2, box [41.755001068115234, 49.314998626708984, 183.0050048828125, 113.00499725341797], IOU: 0.0000
          matched prediction: None
-     thermal Predicted count: 0, Baseline count: 1
+     thermal Predicted count: 1, Baseline count: 1
+         class 2, box [38.0, 55.0, 227.0, 138.0], IOU: 0.0000
+         matched prediction: None
+---------------------------------------------------------------------------
+
 Processing folder: 2025-03-06_11-37-11-244921
      RGB Predicted count: 1, Baseline count: 1
          class 2, box [71.0, 56.0, 171.0, 106.0], IOU: 0.0000
          matched prediction: None
      thermal Predicted count: 0, Baseline count: 1
+---------------------------------------------------------------------------
+
 Processing folder: 2025-04-12_12-36-27-920941
      RGB Predicted count: 2, Baseline count: 2
          class 2, box [76.0, 85.0, 131.0, 105.0], IOU: 0.9328
          matched prediction: (detected object (box=[76.828857421875, 85.69857788085938, 131.40371704101562, 105.23958587646484], score=0.8038, iou=0.9328)
          class 2, box [249.0, 88.0, 266.0, 100.0], IOU: 0.8409
          matched prediction: (detected object (box=[249.87403869628906, 88.6860122680664, 266.85516357421875, 99.82039642333984], score=0.6089, iou=0.8409)
-     thermal Predicted count: 1, Baseline count: 2
-         class 2, box [92.0, 97.0, 180.0, 126.0], IOU: 0.6824
-         matched prediction: (detected object (box=[92.25579071044922, 101.66365051269531, 166.27410888671875, 127.18305969238281], score=0.4245, iou=0.6824)
-         class 2, box [301.0, 104.0, 319.0, 121.0], IOU: 0.0000
-         matched prediction: None
+     thermal Predicted count: 2, Baseline count: 2
+         class 2, box [92.0, 97.0, 180.0, 126.0], IOU: 0.7013
+         matched prediction: (detected object (box=[92.43504333496094, 101.42237854003906, 167.0006561279297, 126.81906127929688], score=0.7923, iou=0.7013)
+         class 2, box [301.0, 104.0, 319.0, 121.0], IOU: 0.7917
+         matched prediction: (detected object (box=[301.9054870605469, 105.94837951660156, 319.9512023925781, 120.77421569824219], score=0.3612, iou=0.7917)
+---------------------------------------------------------------------------
+
 Processing folder: 2025-04-14_15-52-50-898254
      RGB Predicted count: 1, Baseline count: 1
          class 2, box [0.0, 27.0, 123.0, 109.0], IOU: 0.0000
          matched prediction: None
      thermal Predicted count: 0, Baseline count: 1
+         class 2, box [0.0, 29.0, 125.0, 131.0], IOU: 0.0000
+         matched prediction: None
+---------------------------------------------------------------------------
+
 Processing folder: 2025-04-11_23-34-57-446652
      RGB Predicted count: 0, Baseline count: 1
-     thermal Predicted count: 0, Baseline count: 1
+     thermal Predicted count: 1, Baseline count: 1
+         class 0, box [253.0, 94.0, 262.0, 113.0], IOU: 0.6667
+         matched prediction: (detected object (box=[254.35006713867188, 92.09524536132812, 263.2889099121094, 113.61468505859375], score=0.3330, iou=0.6667)
+---------------------------------------------------------------------------
+
 Processing folder: 2025-04-10_14-58-31-151642
      RGB Predicted count: 1, Baseline count: 1
          class 2, box [141.0, 47.0, 266.0, 109.0], IOU: 0.9394
          matched prediction: (detected object (box=[142.7166748046875, 49.1184196472168, 267.0, 108.62567901611328], score=0.9142, iou=0.9394)
      thermal Predicted count: 1, Baseline count: 1
-         class 2, box [169.0, 60.0, 319.0, 131.0], IOU: 0.9735
-         matched prediction: (detected object (box=[170.16238403320312, 60.100040435791016, 319.6588439941406, 131.956298828125], score=0.8368, iou=0.9735)
+         class 2, box [169.0, 60.0, 319.0, 131.0], IOU: 0.9566
+         matched prediction: (detected object (box=[169.78555297851562, 60.315338134765625, 318.8792419433594, 133.45668029785156], score=0.8060, iou=0.9566)
+---------------------------------------------------------------------------
+
 Processing folder: 2025-04-10_15-12-31-062414
      RGB Predicted count: 2, Baseline count: 2
          class 2, box [141.0, 74.0, 241.0, 114.0], IOU: 0.7543
@@ -115,10 +173,12 @@ Processing folder: 2025-04-10_15-12-31-062414
          class 2, box [209.0, 76.0, 266.0, 113.0], IOU: 0.9104
          matched prediction: (detected object (box=[208.72634887695312, 78.54736328125, 266.7214050292969, 113.23648071289062], score=0.7795, iou=0.9104)
      thermal Predicted count: 1, Baseline count: 2
-         class 2, box [172.0, 88.0, 281.0, 139.0], IOU: 0.6980
-         matched prediction: (detected object (box=[173.65542602539062, 87.06251525878906, 318.5234375, 140.62062072753906], score=0.4592, iou=0.6980)
+         class 2, box [172.0, 88.0, 281.0, 139.0], IOU: 0.6481
+         matched prediction: (detected object (box=[173.0208740234375, 81.96159362792969, 317.50811767578125, 140.40748596191406], score=0.8104, iou=0.6481)
          class 2, box [252.0, 90.0, 319.0, 133.0], IOU: 0.0000
          matched prediction: None
+---------------------------------------------------------------------------
+
 Processing folder: 2025-04-12_12-13-01-082938
      RGB Predicted count: 3, Baseline count: 4
          class 2, box [166.0, 66.0, 266.0, 103.0], IOU: 0.9177
@@ -130,14 +190,16 @@ Processing folder: 2025-04-12_12-13-01-082938
          class 2, box [65.84500122070312, 78.0, 97.09500122070312, 99.30000305175781], IOU: 0.0000
          matched prediction: None
      thermal Predicted count: 1, Baseline count: 4
-         class 2, box [203.0, 79.0, 319.0, 125.0], IOU: 0.9242
-         matched prediction: (detected object (box=[202.39662170410156, 79.92132568359375, 319.884033203125, 127.17010498046875], score=0.3023, iou=0.9242)
+         class 2, box [203.0, 79.0, 319.0, 125.0], IOU: 0.9134
+         matched prediction: (detected object (box=[203.61663818359375, 80.0191650390625, 319.8485107421875, 127.64682006835938], score=0.8510, iou=0.9134)
          class 2, box [24.0, 95.0, 64.0, 118.0], IOU: 0.0000
          matched prediction: None
          class 2, box [86.0, 94.0, 118.0, 116.0], IOU: 0.0000
          matched prediction: None
          class 2, box [61.0, 97.0, 91.0, 116.0], IOU: 0.0000
          matched prediction: None
+---------------------------------------------------------------------------
+
 Processing folder: 2025-03-24_14-11-09-979662
      RGB Predicted count: 2, Baseline count: 4
          class 2, box [126.0, 94.0, 149.0, 104.0], IOU: 0.7772
@@ -151,12 +213,14 @@ Processing folder: 2025-03-24_14-11-09-979662
      thermal Predicted count: 1, Baseline count: 4
          class 2, box [151.47999572753906, 111.01000213623047, 187.22000122070312, 126.8499984741211], IOU: 0.0000
          matched prediction: None
-         class 2, box [185.19000244140625, 113.23500061035156, 218.88999938964844, 125.18499755859375], IOU: 0.8698
-         matched prediction: (detected object (box=[187.4898681640625, 113.07304382324219, 218.35678100585938, 125.71449279785156], score=0.3600, iou=0.8698)
+         class 2, box [185.19000244140625, 113.23500061035156, 218.88999938964844, 125.18499755859375], IOU: 0.8409
+         matched prediction: (detected object (box=[187.79832458496094, 112.78730773925781, 218.69322204589844, 125.91273498535156], score=0.5559, iou=0.8409)
          class 2, box [15.925000190734863, 105.08499908447266, 69.99500274658203, 126.29499816894531], IOU: 0.0000
          matched prediction: None
          class 2, box [0.0, 105.08499908447266, 37.220001220703125, 128.51499938964844], IOU: 0.0000
          matched prediction: None
+---------------------------------------------------------------------------
+
 Processing folder: 2025-04-12_12-22-57-771437
      RGB Predicted count: 2, Baseline count: 2
          class 2, box [54.0, 102.0, 153.0, 153.0], IOU: 0.9514
@@ -164,6 +228,8 @@ Processing folder: 2025-04-12_12-22-57-771437
          class 2, box [36.81999969482422, 136.0050048828125, 59.70000076293945, 156.05499267578125], IOU: 0.0000
          matched prediction: None
      thermal Predicted count: 0, Baseline count: 2
+---------------------------------------------------------------------------
+
 Processing folder: 2025-04-11_23-34-48-852038
      RGB Predicted count: 1, Baseline count: 3
          class 2, box [76.0, 63.0, 205.0, 119.0], IOU: 0.9465
@@ -172,18 +238,22 @@ Processing folder: 2025-04-11_23-34-48-852038
          matched prediction: None
          class 2, box [34.69499969482422, 79.06999969482422, 74.06500244140625, 93.80999755859375], IOU: 0.0000
          matched prediction: None
-     thermal Predicted count: 0, Baseline count: 3
-         class 2, box [77.0, 75.0, 244.0, 145.0], IOU: 0.0000
-         matched prediction: None
+     thermal Predicted count: 1, Baseline count: 3
+         class 2, box [77.0, 75.0, 244.0, 145.0], IOU: 0.9229
+         matched prediction: (detected object (box=[85.50614166259766, 75.17420959472656, 247.02285766601562, 144.4669189453125], score=0.5172, iou=0.9229)
          class 2, box [61.150001525878906, 91.94000244140625, 122.69000244140625, 113.16000366210938], IOU: 0.0000
          matched prediction: None
          class 2, box [45.76499938964844, 93.4800033569336, 84.61499786376953, 112.0], IOU: 0.0000
          matched prediction: None
+---------------------------------------------------------------------------
+
 Processing folder: 2025-03-18_12-43-02-113652
      RGB Predicted count: 2, Baseline count: 1
          class 2, box [0.0, 7.0, 266.0, 133.0], IOU: 0.9520
          matched prediction: (detected object (box=[0.5296580195426941, 9.504549980163574, 261.2642517089844, 134.1780548095703], score=0.6786, iou=0.9520)
      thermal Predicted count: 0, Baseline count: 1
+---------------------------------------------------------------------------
+
 Processing folder: 2025-04-14_15-56-22-327489
      RGB Predicted count: 3, Baseline count: 2
          class 2, box [198.0, 23.0, 266.0, 117.0], IOU: 0.9230
@@ -191,6 +261,8 @@ Processing folder: 2025-04-14_15-56-22-327489
          class 1, box [99.4000015258789, 90.52999877929688, 121.81999969482422, 106.97000122070312], IOU: 0.0000
          matched prediction: None
      thermal Predicted count: 0, Baseline count: 2
+---------------------------------------------------------------------------
+
 Processing folder: 2025-03-24_13-56-50-226402
      RGB Predicted count: 5, Baseline count: 5
          class 2, box [162.0, 64.0, 237.0, 116.0], IOU: 0.9060
@@ -203,20 +275,24 @@ Processing folder: 2025-03-24_13-56-50-226402
          matched prediction: (detected object (box=[143.7138214111328, 75.1502685546875, 161.8304443359375, 103.8639907836914], score=0.7825, iou=0.9126)
          class 2, box [241.0, 81.0, 260.0, 95.0], IOU: 0.0000
          matched prediction: None
-     thermal Predicted count: 1, Baseline count: 5
-         class 2, box [194.15499877929688, 78.36499786376953, 284.0450134277344, 142.03500366210938], IOU: 0.0000
-         matched prediction: None
-         class 2, box [75.50499725341797, 78.37000274658203, 178.5749969482422, 137.14999389648438], IOU: 0.8498
-         matched prediction: (detected object (box=[72.5196762084961, 76.50666809082031, 188.35031127929688, 138.0542755126953], score=0.6986, iou=0.8498)
-         class 2, box [0.004999999888241291, 84.48999786376953, 85.09500122070312, 133.47000122070312], IOU: 0.0000
-         matched prediction: None
+     thermal Predicted count: 3, Baseline count: 5
+         class 2, box [194.15499877929688, 78.36499786376953, 284.0450134277344, 142.03500366210938], IOU: 0.7133
+         matched prediction: (detected object (box=[191.71920776367188, 89.13685607910156, 286.779296875, 149.0790252685547], score=0.6782, iou=0.7133)
+         class 2, box [75.50499725341797, 78.37000274658203, 178.5749969482422, 137.14999389648438], IOU: 0.8872
+         matched prediction: (detected object (box=[72.46536254882812, 76.59161376953125, 184.33929443359375, 136.64942932128906], score=0.8731, iou=0.8872)
+         class 2, box [0.004999999888241291, 84.48999786376953, 85.09500122070312, 133.47000122070312], IOU: 0.9403
+         matched prediction: (detected object (box=[0.15682220458984375, 83.12394714355469, 86.51376342773438, 134.27198791503906], score=0.5365, iou=0.9403)
          class 2, box [171.38499450683594, 90.61499786376953, 194.15499877929688, 127.34500122070312], IOU: 0.0000
          matched prediction: None
          class 2, box [288.8349914550781, 99.19000244140625, 311.6050109863281, 116.33000183105469], IOU: 0.0000
          matched prediction: None
+---------------------------------------------------------------------------
+
 Processing folder: 2025-04-12_12-55-10-541778
      RGB Predicted count: 0, Baseline count: 1
      thermal Predicted count: 0, Baseline count: 1
+---------------------------------------------------------------------------
+
 Processing folder: 2025-04-09_09-26-49-215779
      RGB Predicted count: 4, Baseline count: 5
          class 2, box [73.0, 50.0, 163.0, 123.0], IOU: 0.0000
@@ -229,17 +305,19 @@ Processing folder: 2025-04-09_09-26-49-215779
          matched prediction: None
          class 2, box [31.815000534057617, 81.7300033569336, 57.724998474121094, 111.51000213623047], IOU: 0.6090
          matched prediction: (detected object (box=[38.39228820800781, 82.2935562133789, 55.91677474975586, 109.10982513427734], score=0.4962, iou=0.6090)
-     thermal Predicted count: 1, Baseline count: 5
-         class 2, box [252.0, 61.0, 319.0, 141.0], IOU: 0.9041
-         matched prediction: (detected object (box=[253.36839294433594, 66.25852966308594, 319.8558349609375, 141.0231475830078], score=0.3919, iou=0.9041)
-         class 2, box [83.0, 55.0, 193.0, 153.0], IOU: 0.0000
-         matched prediction: None
+     thermal Predicted count: 4, Baseline count: 5
+         class 2, box [252.0, 61.0, 319.0, 141.0], IOU: 0.8035
+         matched prediction: (detected object (box=[253.47189331054688, 73.80078125, 319.7481384277344, 140.13327026367188], score=0.4604, iou=0.8035)
+         class 2, box [83.0, 55.0, 193.0, 153.0], IOU: 0.9406
+         matched prediction: (detected object (box=[83.97225952148438, 57.71632385253906, 191.39389038085938, 153.94989013671875], score=0.3253, iou=0.9406)
          class 2, box [0.0, 61.0, 54.2599983215332, 147.0], IOU: 0.0000
          matched prediction: None
-         class 2, box [193.0, 110.0, 230.0, 130.0], IOU: 0.0000
-         matched prediction: None
+         class 2, box [193.0, 110.0, 230.0, 130.0], IOU: 0.7500
+         matched prediction: (detected object (box=[193.8058624267578, 111.63310241699219, 227.96018981933594, 132.82350158691406], score=0.3410, iou=0.7500)
          class 2, box [39.26499938964844, 96.56500244140625, 68.33499908447266, 131.85499572753906], IOU: 0.0000
          matched prediction: None
+---------------------------------------------------------------------------
+
 Processing folder: 2025-03-06_11-52-31-345948
      RGB Predicted count: 3, Baseline count: 4
          class 2, box [55.060001373291016, 0.3149999976158142, 174.5, 117.00499725341797], IOU: 0.0000
@@ -251,6 +329,8 @@ Processing folder: 2025-03-06_11-52-31-345948
          class 2, box [221.56500244140625, 94.74500274658203, 247.19500732421875, 109.05500030517578], IOU: 0.0000
          matched prediction: None
      thermal Predicted count: 0, Baseline count: 4
+---------------------------------------------------------------------------
+
 Processing folder: 2025-03-18_12-44-23-204021
      RGB Predicted count: 1, Baseline count: 8
          class 2, box [213.0, 0.0, 266.0, 157.0], IOU: 0.9618
@@ -270,31 +350,19 @@ Processing folder: 2025-03-18_12-44-23-204021
          class 2, box [190.31500244140625, 87.87999725341797, 205.94500732421875, 114.68000030517578], IOU: 0.0000
          matched prediction: None
      thermal Predicted count: 0, Baseline count: 8
-         class 2, box [234.51499938964844, 0.0, 318.80499267578125, 184.94000244140625], IOU: 0.0000
-         matched prediction: None
-         class 2, box [189.6649932861328, 101.98999786376953, 237.35499572753906, 148.91000366210938], IOU: 0.0000
-         matched prediction: None
-         class 2, box [0.0, 172.34500122070312, 47.68000030517578, 207.65499877929688], IOU: 0.0000
-         matched prediction: None
-         class 2, box [118.78500366210938, 126.72000122070312, 178.69500732421875, 170.05999755859375], IOU: 0.0000
-         matched prediction: None
-         class 2, box [183.97999572753906, 118.48500061035156, 196.6999969482422, 151.4149932861328], IOU: 0.0000
-         matched prediction: None
-         class 2, box [38.2599983215332, 172.73500061035156, 67.62000274658203, 189.30499267578125], IOU: 0.0000
-         matched prediction: None
-         class 2, box [230.52000427246094, 92.23500061035156, 246.66000366210938, 133.9250030517578], IOU: 0.0000
-         matched prediction: None
-         class 2, box [237.30999755859375, 107.0, 247.30999755859375, 130.3800048828125], IOU: 0.0000
-         matched prediction: None
+---------------------------------------------------------------------------
+
 Processing folder: 2025-04-11_23-00-37-456770
      RGB Predicted count: 0, Baseline count: 3
-     thermal Predicted count: 1, Baseline count: 3
-         class 0, box [56.0, 57.0, 99.0, 153.0], IOU: 0.8986
-         matched prediction: (detected object (box=[57.33173370361328, 59.4552001953125, 100.3318862915039, 154.97828674316406], score=0.3818, iou=0.8986)
+     thermal Predicted count: 2, Baseline count: 3
+         class 0, box [56.0, 57.0, 99.0, 153.0], IOU: 0.7879
+         matched prediction: (detected object (box=[56.57099151611328, 60.61341857910156, 92.0768051147461, 153.99453735351562], score=0.6430, iou=0.7879)
          class 2, box [105.0, 65.0, 220.0, 150.0], IOU: 0.0000
          matched prediction: None
          class 2, box [253.0, 68.0, 319.0, 134.0], IOU: 0.0000
          matched prediction: None
+---------------------------------------------------------------------------
+
 Processing folder: 2025-03-06_11-38-20-081916
      RGB Predicted count: 2, Baseline count: 4
          class 2, box [0.0, 85.0, 56.0, 108.0], IOU: 0.8334
@@ -305,10 +373,22 @@ Processing folder: 2025-03-06_11-38-20-081916
          matched prediction: None
          class 2, box [52.0, 89.0, 84.0, 107.0], IOU: 0.8531
          matched prediction: (detected object (box=[54.27751159667969, 90.40213012695312, 83.93792724609375, 107.03720092773438], score=0.5039, iou=0.8531)
-     thermal Predicted count: 0, Baseline count: 4
+     thermal Predicted count: 1, Baseline count: 4
+         class 2, box [221.0, 108.0, 241.0, 119.0], IOU: 0.7896
+         matched prediction: (detected object (box=[220.35284423828125, 108.79722595214844, 241.68795776367188, 120.16325378417969], score=0.2932, iou=0.7896)
+         class 2, box [188.0, 107.0, 206.0, 120.0], IOU: 0.0000
+         matched prediction: None
+         class 2, box [0.0, 100.3949966430664, 62.29999923706055, 132.0050048828125], IOU: 0.0000
+         matched prediction: None
+         class 2, box [54.619998931884766, 102.31999969482422, 95.0, 131.6199951171875], IOU: 0.0000
+         matched prediction: None
+---------------------------------------------------------------------------
+
 Processing folder: 2025-04-12_12-53-28-428203
      RGB Predicted count: 0, Baseline count: 1
      thermal Predicted count: 0, Baseline count: 1
+---------------------------------------------------------------------------
+
 Processing folder: 2025-03-24_14-01-13-214574
      RGB Predicted count: 2, Baseline count: 2
          class 2, box [94.0, 65.0, 168.0, 109.0], IOU: 0.9361
@@ -316,6 +396,8 @@ Processing folder: 2025-03-24_14-01-13-214574
          class 2, box [212.0, 71.0, 266.0, 104.0], IOU: 0.9129
          matched prediction: (detected object (box=[212.27236938476562, 72.1241455078125, 266.9908447265625, 105.14215087890625], score=0.8454, iou=0.9129)
      thermal Predicted count: 0, Baseline count: 2
+---------------------------------------------------------------------------
+
 Processing folder: 2025-04-12_12-23-52-253479
      RGB Predicted count: 2, Baseline count: 2
          class 2, box [0.0, 0.0, 171.0, 129.0], IOU: 0.9411
@@ -323,18 +405,26 @@ Processing folder: 2025-04-12_12-23-52-253479
          class 2, box [225.0, 83.0, 253.0, 101.0], IOU: 0.0000
          matched prediction: None
      thermal Predicted count: 1, Baseline count: 2
-         class 2, box [0.0, 0.0, 198.0, 158.0], IOU: 0.0000
-         matched prediction: None
+         class 2, box [0.0, 0.0, 198.0, 158.0], IOU: 0.9475
+         matched prediction: (detected object (box=[0.63787841796875, 0.813751220703125, 195.21119689941406, 163.11293029785156], score=0.4261, iou=0.9475)
          class 2, box [274.6199951171875, 98.08499908447266, 308.0799865722656, 121.99500274658203], IOU: 0.0000
          matched prediction: None
+---------------------------------------------------------------------------
+
 Processing folder: 2025-03-06_11-52-02-653145
      RGB Predicted count: 1, Baseline count: 1
          class 2, box [77.0, 0.0, 266.0, 114.0], IOU: 0.0000
          matched prediction: None
      thermal Predicted count: 0, Baseline count: 1
+         class 2, box [102.0, 3.0, 319.0, 134.0], IOU: 0.0000
+         matched prediction: None
+---------------------------------------------------------------------------
+
 Processing folder: 2025-04-11_23-40-29-612351
      RGB Predicted count: 0, Baseline count: 0
      thermal Predicted count: 0, Baseline count: 0
+---------------------------------------------------------------------------
+
 Processing folder: 2025-03-24_14-14-35-835516
      RGB Predicted count: 1, Baseline count: 5
          class 2, box [107.0, 83.0, 172.0, 110.0], IOU: 0.9162
@@ -348,8 +438,8 @@ Processing folder: 2025-03-24_14-14-35-835516
          class 2, box [14.0, 81.0, 48.0, 107.0], IOU: 0.0000
          matched prediction: None
      thermal Predicted count: 1, Baseline count: 5
-         class 2, box [132.08999633789062, 102.01499938964844, 213.4499969482422, 135.46499633789062], IOU: 0.9323
-         matched prediction: (detected object (box=[129.8704833984375, 101.50392150878906, 213.7069091796875, 134.61500549316406], score=0.5917, iou=0.9323)
+         class 2, box [132.08999633789062, 102.01499938964844, 213.4499969482422, 135.46499633789062], IOU: 0.9312
+         matched prediction: (detected object (box=[128.61624145507812, 101.48487854003906, 213.60012817382812, 135.05006408691406], score=0.8118, iou=0.9312)
          class 2, box [84.18499755859375, 100.0199966430664, 140.63499450683594, 133.0800018310547], IOU: 0.0000
          matched prediction: None
          class 2, box [56.14500045776367, 104.91999816894531, 87.01499938964844, 132.24000549316406], IOU: 0.0000
@@ -358,6 +448,8 @@ Processing folder: 2025-03-24_14-14-35-835516
          matched prediction: None
          class 2, box [16.780000686645508, 100.33999633789062, 76.37999725341797, 131.02000427246094], IOU: 0.0000
          matched prediction: None
+---------------------------------------------------------------------------
+
 Processing folder: 2025-03-18_08-26-20-580943
      RGB Predicted count: 2, Baseline count: 3
          class 2, box [54.0, 66.0, 121.0, 103.0], IOU: 0.0000
@@ -367,11 +459,17 @@ Processing folder: 2025-03-18_08-26-20-580943
          class 2, box [179.0, 73.0, 241.0, 105.0], IOU: 0.0000
          matched prediction: None
      thermal Predicted count: 0, Baseline count: 3
+---------------------------------------------------------------------------
+
 Processing folder: 2025-03-24_14-03-24-895006
      RGB Predicted count: 3, Baseline count: 1
          class 2, box [174.0, 64.0, 266.0, 116.0], IOU: 0.6961
          matched prediction: (detected object (box=[175.24447631835938, 66.32846069335938, 242.46604919433594, 116.1908187866211], score=0.7701, iou=0.6961)
-     thermal Predicted count: 0, Baseline count: 1
+     thermal Predicted count: 1, Baseline count: 1
+         class 2, box [215.0, 78.0, 319.0, 139.0], IOU: 0.9502
+         matched prediction: (detected object (box=[215.7856903076172, 79.44964599609375, 319.60687255859375, 139.85348510742188], score=0.7602, iou=0.9502)
+---------------------------------------------------------------------------
+
 Processing folder: 2025-03-06_11-40-25-733889
      RGB Predicted count: 2, Baseline count: 2
          class 2, box [10.0, 62.0, 107.0, 111.0], IOU: 0.9209
@@ -383,9 +481,13 @@ Processing folder: 2025-03-06_11-40-25-733889
          matched prediction: None
          class 2, box [130.0, 82.0, 244.0, 125.0], IOU: 0.0000
          matched prediction: None
+---------------------------------------------------------------------------
+
 Processing folder: 2025-04-11_23-37-45-597052
      RGB Predicted count: 0, Baseline count: 0
      thermal Predicted count: 0, Baseline count: 0
+---------------------------------------------------------------------------
+
 Processing folder: 2025-04-11_22-57-03-131683
      RGB Predicted count: 0, Baseline count: 3
          class 0, box [4.690000057220459, 33.189998626708984, 36.56999969482422, 136.22999572753906], IOU: 0.0000
@@ -394,13 +496,15 @@ Processing folder: 2025-04-11_22-57-03-131683
          matched prediction: None
          class 2, box [69.06500244140625, 85.31500244140625, 140.31500244140625, 111.625], IOU: 0.0000
          matched prediction: None
-     thermal Predicted count: 1, Baseline count: 3
-         class 0, box [7.0, 43.0, 41.0, 150.0], IOU: 0.8909
-         matched prediction: (detected object (box=[8.361175537109375, 43.225006103515625, 39.35457992553711, 152.46768188476562], score=0.5104, iou=0.8909)
-         class 2, box [84.0, 101.0, 171.0, 131.0], IOU: 0.0000
-         matched prediction: None
+     thermal Predicted count: 2, Baseline count: 3
+         class 0, box [7.0, 43.0, 41.0, 150.0], IOU: 0.9787
+         matched prediction: (detected object (box=[6.6367645263671875, 43.144474029541016, 41.054115295410156, 150.86203002929688], score=0.5038, iou=0.9787)
+         class 2, box [84.0, 101.0, 171.0, 131.0], IOU: 0.9541
+         matched prediction: (detected object (box=[83.29069519042969, 101.40296936035156, 172.0399627685547, 131.41622924804688], score=0.5990, iou=0.9541)
          class 2, box [136.16000366210938, 103.1500015258789, 168.0800018310547, 119.61000061035156], IOU: 0.0000
          matched prediction: None
+---------------------------------------------------------------------------
+
 Processing folder: 2025-04-02_15-23-08-355402
      RGB Predicted count: 4, Baseline count: 3
          class 2, box [55.0, 71.0, 140.0, 113.0], IOU: 0.0000
@@ -409,16 +513,22 @@ Processing folder: 2025-04-02_15-23-08-355402
          matched prediction: (detected object (box=[1.9861539602279663, 90.466552734375, 39.43586730957031, 112.81513977050781], score=0.6996, iou=0.8507)
          class 2, box [36.0, 85.0, 58.0, 112.0], IOU: 0.9130
          matched prediction: (detected object (box=[35.65828323364258, 86.52212524414062, 57.63092041015625, 112.0427017211914], score=0.5016, iou=0.9130)
-     thermal Predicted count: 1, Baseline count: 3
-         class 2, box [67.66500091552734, 83.0, 174.9949951171875, 135.0], IOU: 0.7578
-         matched prediction: (detected object (box=[90.96011352539062, 83.93775939941406, 175.32424926757812, 135.76113891601562], score=0.4142, iou=0.7578)
-         class 2, box [6.380000114440918, 104.0, 48.0, 131.5399932861328], IOU: 0.0000
-         matched prediction: None
+     thermal Predicted count: 2, Baseline count: 3
+         class 2, box [67.66500091552734, 83.0, 174.9949951171875, 135.0], IOU: 0.7615
+         matched prediction: (detected object (box=[90.13014221191406, 83.59719848632812, 176.32154846191406, 135.92039489746094], score=0.2802, iou=0.7615)
+         class 2, box [6.380000114440918, 104.0, 48.0, 131.5399932861328], IOU: 0.8120
+         matched prediction: (detected object (box=[0.37815093994140625, 102.75144958496094, 49.12725830078125, 131.35609436035156], score=0.2688, iou=0.8120)
          class 2, box [45.7400016784668, 98.41000366210938, 72.13999938964844, 136.85000610351562], IOU: 0.0000
          matched prediction: None
+---------------------------------------------------------------------------
+
 Processing folder: 2025-03-19_15-44-05-843106
      RGB Predicted count: 0, Baseline count: 1
      thermal Predicted count: 0, Baseline count: 1
+         class 2, box [310.0, 67.33000183105469, 320.0, 118.1500015258789], IOU: 0.0000
+         matched prediction: None
+---------------------------------------------------------------------------
+
 Processing folder: 2025-04-14_15-49-16-668137
      RGB Predicted count: 2, Baseline count: 2
          class 2, box [32.0, 71.0, 131.0, 112.0], IOU: 0.9294
@@ -426,6 +536,8 @@ Processing folder: 2025-04-14_15-49-16-668137
          class 2, box [131.86000061035156, 95.30000305175781, 149.44000244140625, 102.83999633789062], IOU: 0.6732
          matched prediction: (detected object (box=[132.5103302001953, 96.978515625, 149.03919982910156, 103.52790832519531], score=0.3401, iou=0.6732)
      thermal Predicted count: 0, Baseline count: 2
+---------------------------------------------------------------------------
+
 Processing folder: 2025-04-11_23-44-05-429087
      RGB Predicted count: 1, Baseline count: 2
          class 2, box [92.5, 85.31999969482422, 107.5, 95.05999755859375], IOU: 0.5098
@@ -433,6 +545,8 @@ Processing folder: 2025-04-11_23-44-05-429087
          class 2, box [140.6199951171875, 86.00499725341797, 155.0, 91.25499725341797], IOU: 0.0000
          matched prediction: None
      thermal Predicted count: 0, Baseline count: 2
+---------------------------------------------------------------------------
+
 Processing folder: 2025-03-06_11-54-29-998069
      RGB Predicted count: 4, Baseline count: 5
          class 2, box [146.0, 74.37999725341797, 192.5, 94.0], IOU: 0.0000
@@ -445,12 +559,26 @@ Processing folder: 2025-03-06_11-54-29-998069
          matched prediction: (detected object (box=[56.3376350402832, 82.89832305908203, 74.03174591064453, 91.20306396484375], score=0.3998, iou=0.8281)
          class 2, box [213.47500610351562, 86.69499969482422, 223.02499389648438, 94.34500122070312], IOU: 0.0000
          matched prediction: None
-     thermal Predicted count: 0, Baseline count: 5
+     thermal Predicted count: 2, Baseline count: 5
+         class 2, box [177.0, 83.0, 236.0, 109.0], IOU: 0.8531
+         matched prediction: (detected object (box=[176.7540283203125, 83.38302612304688, 238.69137573242188, 111.62191772460938], score=0.3216, iou=0.8531)
+         class 2, box [131.0, 94.0, 179.0, 110.0], IOU: 0.7501
+         matched prediction: (detected object (box=[131.1951904296875, 95.8003158569336, 180.8260498046875, 112.23685455322266], score=0.6394, iou=0.7501)
+         class 2, box [34.0, 100.0, 59.0, 111.0], IOU: 0.0000
+         matched prediction: None
+         class 2, box [65.0, 99.0, 88.0, 108.0], IOU: 0.0000
+         matched prediction: None
+         class 2, box [259.0, 98.0, 272.0, 106.0], IOU: 0.0000
+         matched prediction: None
+---------------------------------------------------------------------------
+
 Processing folder: 2025-04-14_15-36-55-172260
      RGB Predicted count: 1, Baseline count: 1
          class 2, box [97.0, 84.0, 145.0, 108.0], IOU: 0.9164
          matched prediction: (detected object (box=[97.4802017211914, 85.44498443603516, 144.98585510253906, 108.36167907714844], score=0.6574, iou=0.9164)
      thermal Predicted count: 0, Baseline count: 1
+---------------------------------------------------------------------------
+
 Processing folder: 2025-03-19_15-37-21-025630
      RGB Predicted count: 3, Baseline count: 9
          class 2, box [108.0, 89.0, 138.0, 111.0], IOU: 0.8419
@@ -472,9 +600,9 @@ Processing folder: 2025-03-19_15-37-21-025630
          class 2, box [44.060001373291016, 96.62999725341797, 53.119998931884766, 105.30999755859375], IOU: 0.0000
          matched prediction: None
      thermal Predicted count: 1, Baseline count: 9
-         class 2, box [154.0749969482422, 103.23500061035156, 246.6649932861328, 137.96499633789062], IOU: 0.7210
-         matched prediction: (detected object (box=[153.96115112304688, 103.67185974121094, 276.4966125488281, 136.3239288330078], score=0.6236, iou=0.7210)
-         class 2, box [204.44500732421875, 102.48999786376953, 278.3349914550781, 135.19000244140625], IOU: 0.5477
+         class 2, box [154.0749969482422, 103.23500061035156, 246.6649932861328, 137.96499633789062], IOU: 0.7049
+         matched prediction: (detected object (box=[150.43331909179688, 102.78132629394531, 277.277099609375, 136.94471740722656], score=0.4375, iou=0.7049)
+         class 2, box [204.44500732421875, 102.48999786376953, 278.3349914550781, 135.19000244140625], IOU: 0.5378
          matched prediction: None
          class 2, box [131.6649932861328, 103.9749984741211, 174.0749969482422, 132.96499633789062], IOU: 0.0000
          matched prediction: None
@@ -490,6 +618,8 @@ Processing folder: 2025-03-19_15-37-21-025630
          matched prediction: None
          class 2, box [39.6150016784668, 116.2300033569336, 53.845001220703125, 124.2300033569336], IOU: 0.0000
          matched prediction: None
+---------------------------------------------------------------------------
+
 Processing folder: 2025-04-02_15-24-38-206689
      RGB Predicted count: 5, Baseline count: 5
          class 2, box [236.0, 71.0, 266.0, 110.0], IOU: 0.8450
@@ -503,6 +633,8 @@ Processing folder: 2025-04-02_15-24-38-206689
          class 2, box [45.0, 82.0, 83.0, 106.0], IOU: 0.8078
          matched prediction: (detected object (box=[47.381961822509766, 84.82221221923828, 83.15569305419922, 106.5155258178711], score=0.7448, iou=0.8078)
      thermal Predicted count: 0, Baseline count: 5
+---------------------------------------------------------------------------
+
 Processing folder: 2025-04-11_22-58-15-671814
      RGB Predicted count: 2, Baseline count: 2
          class 2, box [56.0, 75.0, 92.0, 100.0], IOU: 0.7938
@@ -510,10 +642,8 @@ Processing folder: 2025-04-11_22-58-15-671814
          class 2, box [116.0, 77.0, 158.0, 98.0], IOU: 0.7577
          matched prediction: (detected object (box=[117.21245574951172, 79.46420288085938, 156.44207763671875, 96.49939727783203], score=0.5362, iou=0.7577)
      thermal Predicted count: 0, Baseline count: 2
-         class 2, box [69.0, 89.0, 135.0, 121.0], IOU: 0.0000
-         matched prediction: None
-         class 2, box [140.73500061035156, 89.88500213623047, 211.6649932861328, 116.29499816894531], IOU: 0.0000
-         matched prediction: None
+---------------------------------------------------------------------------
+
 Processing folder: 2025-04-12_12-33-13-812072
      RGB Predicted count: 1, Baseline count: 4
          class 0, box [119.0, 79.0, 136.0, 108.0], IOU: 0.7937
@@ -524,7 +654,17 @@ Processing folder: 2025-04-12_12-33-13-812072
          matched prediction: None
          class 2, box [189.68499755859375, 98.49500274658203, 197.4949951171875, 103.74500274658203], IOU: 0.0000
          matched prediction: None
-     thermal Predicted count: 0, Baseline count: 4
+     thermal Predicted count: 1, Baseline count: 4
+         class 0, box [146.0850067138672, 96.3550033569336, 166.4550018310547, 131.86500549316406], IOU: 0.8159
+         matched prediction: (detected object (box=[145.85614013671875, 93.69412231445312, 168.64395141601562, 131.12310791015625], score=0.3643, iou=0.8159)
+         class 2, box [248.10000610351562, 116.40499877929688, 275.5199890136719, 129.71499633789062], IOU: 0.0000
+         matched prediction: None
+         class 2, box [238.40499877929688, 116.46499633789062, 256.81500244140625, 125.03500366210938], IOU: 0.0000
+         matched prediction: None
+         class 2, box [231.57000732421875, 117.53500366210938, 240.92999267578125, 123.96499633789062], IOU: 0.0000
+         matched prediction: None
+---------------------------------------------------------------------------
+
 Processing folder: 2025-04-10_15-15-49-864741
      RGB Predicted count: 2, Baseline count: 4
          class 2, box [137.0, 84.0, 211.0, 109.0], IOU: 0.8731
@@ -535,14 +675,26 @@ Processing folder: 2025-04-10_15-15-49-864741
          matched prediction: None
          class 2, box [0.004999999888241291, 93.75, 3.755000114440918, 107.87000274658203], IOU: 0.0000
          matched prediction: None
-     thermal Predicted count: 0, Baseline count: 4
+     thermal Predicted count: 2, Baseline count: 4
+         class 2, box [167.0, 99.0, 268.0, 133.0], IOU: 0.8331
+         matched prediction: (detected object (box=[165.83758544921875, 99.56866455078125, 254.20391845703125, 132.74179077148438], score=0.4188, iou=0.8331)
+         class 2, box [116.0, 106.0, 163.0, 125.0], IOU: 0.7987
+         matched prediction: (detected object (box=[116.48681640625, 107.32353210449219, 165.5478515625, 126.86166381835938], score=0.5201, iou=0.7987)
+         class 2, box [0.0, 108.0, 10.0, 125.0], IOU: 0.0000
+         matched prediction: None
+         class 2, box [99.44000244140625, 111.01000213623047, 112.95999908447266, 124.06999969482422], IOU: 0.0000
+         matched prediction: None
+---------------------------------------------------------------------------
+
 Processing folder: 2025-04-12_12-21-19-288158
      RGB Predicted count: 1, Baseline count: 1
          class 2, box [82.0, 90.0, 145.0, 114.0], IOU: 0.9154
          matched prediction: (detected object (box=[82.69554901123047, 90.85694122314453, 145.4737548828125, 114.83059692382812], score=0.9007, iou=0.9154)
-     thermal Predicted count: 0, Baseline count: 1
-         class 2, box [99.0, 107.0, 179.0, 139.0], IOU: 0.0000
-         matched prediction: None
+     thermal Predicted count: 1, Baseline count: 1
+         class 2, box [99.0, 107.0, 179.0, 139.0], IOU: 0.9051
+         matched prediction: (detected object (box=[98.87928771972656, 109.26594543457031, 179.8299102783203, 139.4929656982422], score=0.7788, iou=0.9051)
+---------------------------------------------------------------------------
+
 Processing folder: 2025-04-11_23-31-53-985983
      RGB Predicted count: 1, Baseline count: 2
          class 0, box [99.0, 54.0, 127.0, 120.0], IOU: 0.0000
@@ -550,13 +702,21 @@ Processing folder: 2025-04-11_23-31-53-985983
          class 0, box [130.0, 48.0, 154.0, 120.0], IOU: 0.0000
          matched prediction: None
      thermal Predicted count: 0, Baseline count: 2
+---------------------------------------------------------------------------
+
 Processing folder: 2025-03-18_12-46-24-641832
      RGB Predicted count: 2, Baseline count: 2
          class 2, box [0.0, 32.0, 52.0, 129.0], IOU: 0.0000
          matched prediction: None
          class 2, box [50.0, 63.0, 157.0, 122.0], IOU: 0.9549
          matched prediction: (detected object (box=[49.51996994018555, 64.61109161376953, 158.31300354003906, 121.86363220214844], score=0.8892, iou=0.9549)
-     thermal Predicted count: 0, Baseline count: 2
+     thermal Predicted count: 1, Baseline count: 2
+         class 2, box [51.0, 72.98500061035156, 186.0, 146.9949951171875], IOU: 0.0000
+         matched prediction: None
+         class 2, box [0.0, 46.0, 58.0, 155.0], IOU: 0.0000
+         matched prediction: None
+---------------------------------------------------------------------------
+
 Processing folder: 2025-03-24_14-14-16-187470
      RGB Predicted count: 5, Baseline count: 7
          class 2, box [135.0050048828125, 57.0, 220.3350067138672, 110.0], IOU: 0.9148
@@ -574,8 +734,8 @@ Processing folder: 2025-03-24_14-14-16-187470
          class 2, box [106.36499786376953, 80.22000122070312, 130.4550018310547, 99.69999694824219], IOU: 0.0000
          matched prediction: None
      thermal Predicted count: 1, Baseline count: 7
-         class 2, box [161.80499267578125, 69.79000091552734, 264.07501220703125, 134.69000244140625], IOU: 0.8146
-         matched prediction: (detected object (box=[156.58828735351562, 69.00654602050781, 274.2756652832031, 138.244384765625], score=0.5110, iou=0.8146)
+         class 2, box [161.80499267578125, 69.79000091552734, 264.07501220703125, 134.69000244140625], IOU: 0.5764
+         matched prediction: (detected object (box=[158.4698486328125, 69.17054748535156, 235.25238037109375, 123.65977478027344], score=0.3377, iou=0.5764)
          class 2, box [40.75, 73.47000122070312, 153.41000366210938, 132.25], IOU: 0.0000
          matched prediction: None
          class 2, box [0.004999999888241291, 89.38999938964844, 53.935001373291016, 132.25], IOU: 0.0000
@@ -588,6 +748,8 @@ Processing folder: 2025-03-24_14-14-16-187470
          matched prediction: None
          class 2, box [127.4749984741211, 98.23500061035156, 156.34500122070312, 122.08499908447266], IOU: 0.0000
          matched prediction: None
+---------------------------------------------------------------------------
+
 Processing folder: 2025-03-20_13-45-28-801596
      RGB Predicted count: 1, Baseline count: 5
          class 2, box [8.0, 79.0, 79.0, 104.0], IOU: 0.9131
@@ -601,6 +763,8 @@ Processing folder: 2025-03-20_13-45-28-801596
          class 2, box [-0.004999999888241291, 92.6500015258789, 7.724999904632568, 105.1500015258789], IOU: 0.0000
          matched prediction: None
      thermal Predicted count: 0, Baseline count: 5
+---------------------------------------------------------------------------
+
 Processing folder: 2025-03-18_12-44-47-943850
      RGB Predicted count: 2, Baseline count: 3
          class 2, box [89.55999755859375, 59.0, 204.0, 103.0], IOU: 0.9380
@@ -609,13 +773,15 @@ Processing folder: 2025-03-18_12-44-47-943850
          matched prediction: (detected object (box=[188.4231414794922, 62.58351135253906, 266.8752746582031, 109.723876953125], score=0.2557, iou=0.9263)
          class 2, box [58.52000045776367, 76.2699966430664, 92.68000030517578, 97.30999755859375], IOU: 0.0000
          matched prediction: None
-     thermal Predicted count: 0, Baseline count: 3
+     thermal Predicted count: 1, Baseline count: 3
          class 2, box [100.375, 69.0, 241.0050048828125, 120.0], IOU: 0.0000
          matched prediction: None
-         class 2, box [225.0, 69.0, 319.0, 123.0], IOU: 0.0000
-         matched prediction: None
+         class 2, box [225.0, 69.0, 319.0, 123.0], IOU: 0.9353
+         matched prediction: (detected object (box=[224.74961853027344, 70.43804168701172, 319.87890625, 124.5451889038086], score=0.4453, iou=0.9353)
          class 2, box [66.11000061035156, 88.04000091552734, 106.66999816894531, 118.5199966430664], IOU: 0.0000
          matched prediction: None
+---------------------------------------------------------------------------
+
 Processing folder: 2025-03-20_13-44-43-444911
      RGB Predicted count: 0, Baseline count: 11
          class 2, box [168.0, 79.0, 209.0, 104.0], IOU: 0.0000
@@ -641,6 +807,8 @@ Processing folder: 2025-03-20_13-44-43-444911
          class 0, box [123.95999908447266, 87.2699966430664, 130.3000030517578, 100.69000244140625], IOU: 0.0000
          matched prediction: None
      thermal Predicted count: 0, Baseline count: 11
+---------------------------------------------------------------------------
+
 Processing folder: 2025-03-24_14-13-27-230802
      RGB Predicted count: 2, Baseline count: 7
          class 2, box [66.0, 77.0, 150.0, 113.0], IOU: 0.8383
@@ -658,3 +826,4 @@ Processing folder: 2025-03-24_14-13-27-230802
          class 2, box [147.81500244140625, 86.94000244140625, 161.56500244140625, 95.31999969482422], IOU: 0.0000
          matched prediction: None
      thermal Predicted count: 0, Baseline count: 7
+---------------------------------------------------------------------------

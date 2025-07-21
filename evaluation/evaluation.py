@@ -32,13 +32,13 @@ def save_image(yolo_result, image_path):
     summary = ', '.join(f"{v} {k}{'s' if v > 1 else ''}" for k, v in counts.items())
     # print(f"Summary : {summary}")
 
-    # result_img = yolo_result[0].plot()
-    # image_dir = os.path.dirname(image_path)
-    # image_filename = os.path.basename(image_path)
-    # base_name, _ = os.path.splitext(image_filename)
-    # custom_name = base_name + "_obj_detected.jpg"
-    # save_path = os.path.join(image_dir, custom_name)
-    # cv2.imwrite(save_path, result_img)
+    result_img = yolo_result[0].plot()
+    image_dir = os.path.dirname(image_path)
+    image_filename = os.path.basename(image_path)
+    base_name, _ = os.path.splitext(image_filename)
+    custom_name = base_name + "_obj_detected.jpg"
+    save_path = os.path.join(image_dir, custom_name)
+    cv2.imwrite(save_path, result_img)
 
 def readfile(file_path):
     result = {}
@@ -141,7 +141,7 @@ def main():
 
         path = data_dir+"/"+folder+"/thermal"
         base_line_thermal, baseline_count_thermal = readfile(path+".txt")
-        predict_thermal = analyze_rgb_image(path+".jpg")
+        predict_thermal = analyze_thermal_image(path+".jpg")
         predict_count_thermal = getFilteredCount(predict_thermal)
         print(f"\t thermal Predicted count: {predict_count_thermal}, Baseline count: {baseline_count_thermal}".expandtabs(4))
         avarage_thermal_iou, matched_thermal_predictions, baseline = compare(base_line_thermal, predict_thermal, baseline_count_thermal)
