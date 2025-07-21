@@ -127,7 +127,7 @@ def getFilteredCount(predictions, condition=lambda x: x is not None):
 def main():
     data_dir = os.path.join(os.path.dirname(__file__), 'exemplary_subset_labeled')
     folder_list = os.listdir(data_dir)
-    header = ['folder', 'avarage_rgb_iou', 'avarage_thermal_iou']
+    header = ['folder', 'matched rgb', 'avarage_rgb_iou', 'matched thermal', 'avarage_thermal_iou', 'baseline']
     rows = []
 
     for folder in folder_list:
@@ -145,8 +145,8 @@ def main():
         predict_count_thermal = getFilteredCount(predict_thermal)
         print(f"\t thermal Predicted count: {predict_count_thermal}, Baseline count: {baseline_count_thermal}".expandtabs(4))
         avarage_thermal_iou, matched_thermal_predictions, baseline = compare(base_line_thermal, predict_thermal, baseline_count_thermal)
-        rows.append([folder, avarage_rgb_iou, avarage_thermal_iou])
-        # print("---------------------------------------------------------------------------\n")
+        rows.append([folder, matched_rgb_predictions, avarage_rgb_iou, matched_thermal_predictions, avarage_thermal_iou, baseline_count_rgb])
+        print("---------------------------------------------------------------------------\n")
 
     with open('average_iou.csv', 'w', newline='') as file:
         writer = csv.writer(file)
