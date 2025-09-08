@@ -7,10 +7,11 @@ Multimodal arctic winter dataset with snapshots of thermal images, stereo RGB im
 ## Citation
 A paper about this dataset with an evaluation is in the making, please cite the dataset like this until the paper is published:
 ```bibtex
-@misc{
+@misc{Thermal_Dataset,
 title="Multimodal Thermal Arctic Winter Dataset",
 author="Stubenvoll, Charlotte and Janaka, M. W. Sohan",
 url="https://github.com/Lapland-Robotics/AI.R-Multimodal_Thermal_Dataset",
+year="2025"
 }
 ```
 
