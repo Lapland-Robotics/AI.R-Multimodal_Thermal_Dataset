@@ -1,5 +1,5 @@
 # AI.R-Multimodal_Thermal_Dataset
-Multimodal arctic winter dataset with snapshots of thermal images, stereo RGB images and lidar point cloud.
+Multimodal arctic winter dataset with 696 snapshots of thermal images, stereo RGB images and lidar point cloud.
 
 ![Arctic ai Robotics (2)](https://github.com/user-attachments/assets/f127dfc7-4975-4b46-91b3-2373ccc549fb)
 
