@@ -20,9 +20,10 @@ The dataset consists of snapshots of sensors of a mobile robot: Thermal camera, 
 
 
 ## Orientation
-The data is in the "Multimodal Arctic Winter Thermal Image Dataset" folder. Each snapshot of data is named after the time of creation and contains four files, one thermal image (.png), two rgb images from the stereo camera (each .png) and a lidar pointcloud (.pcd):
+The raw collected data is in the "Multimodal Arctic Winter Thermal Image Dataset" folder. Each snapshot of data is named after the time of creation and contains four files, one thermal image (.png), two rgb images from the stereo camera (each .png) and a lidar pointcloud (.pcd):
 <img width="566" height="608" alt="image" src="https://github.com/user-attachments/assets/49aeecda-6fa9-4f2e-8582-b0d6f8dce23d" />
 
+The dataset was labeled with bounding boxes, since the aspect ratio and resolution of the raw RGB and thermal images is different, the RGB images were cut to the perspective of the thermal images before labeling, to ensure that the RGB and thermal images of the same scene include the same objects. Due to small differences in lenses and angles, 6 pictures were excluded in this step due to objects being obscured that were visible in the other image of the same scene. The "bounding_boxes" folder contains seperate sub-folders for images and labels. The labeling was accomplished in Roboflow (https://roboflow.com/), the AI Label Assistant was used as a starting point when applicable, but always needed refinement and correction by hand. 
 
 ## License
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
