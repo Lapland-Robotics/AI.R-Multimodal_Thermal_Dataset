@@ -29,22 +29,22 @@ The dataset is fully labeled with bounding boxes, the labeled data is in the "bo
 The dataset was fully labeled with bounding boxes, since the aspect ratio and resolution of the raw RGB and thermal images is different, the RGB images were cut to the perspective of the thermal images before labeling, to ensure that the RGB and thermal images of the same scene include the same objects. Due to small differences in lenses and angles, 6 pictures were excluded in this step due to objects being obscured that were visible in the other image of the same scene. The labeling was accomplished in Roboflow (https://roboflow.com/), the AI Label Assistant was used as a starting point when applicable, but always needed refinement and correction by hand. 
 ### List of Labels
 The labels are modeled after the YOLO labels, but not all of those objects exist in our dataset. Additional labels were added starting with #80.
-0 : person 
-1: bicycle 
-2: car 
-3: motorcycle 
-5: bus 
-7: truck 
-8: boat
-13: bench 
-14: bird
-15: cat
-16: dog 
-80: traffic-sign
-81: snowmobile
-82: other-vehicle
-83: bicyclist 
-84: motorcyclist
+* 0 : person 
+* 1: bicycle 
+* 2: car 
+* 3: motorcycle 
+* 5: bus 
+* 7: truck 
+* 8: boat
+* 13: bench 
+* 14: bird
+* 15: cat
+* 16: dog 
+* 80: traffic-sign
+* 81: snowmobile
+* 82: other-vehicle
+* 83: bicyclist 
+* 84: motorcyclist
 
 
 
