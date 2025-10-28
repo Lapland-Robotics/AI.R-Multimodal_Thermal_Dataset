@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 10
+names: ['0', '1', '13', '2', '5', '80', '81', '82', '83', '85']
+
+roboflow:
+  workspace: workspace-cuqpp
+  project: ai.r-multimodal_thermal_dataset
+  version: 4
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/workspace-cuqpp/ai.r-multimodal_thermal_dataset/dataset/4
