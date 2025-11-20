@@ -20,11 +20,11 @@ The dataset consists of 696 snapshots of sensors of a mobile robot: Thermal came
 
 
 #### Sensor information:
-<img width="514" height="306" alt="Multimodal_data_acquisition" src="https://github.com/user-attachments/assets/a77290ff-22df-4ed5-9b43-d248d53031b6" />  
-Each snapshot has been individully checked for completeness and quality of the sensor data. Number plates and faces have been manually anonymized using the drawing tool Krita. 
-Thermal camera: S314SPX Mosaic Core  
-Stereo camera: ZED2 Stereo Camera  
-3D lidar: Ouster OS1 Lidar  
+<img width="514" height="306" alt="Multimodal_data_acquisition" src="https://github.com/user-attachments/assets/a77290ff-22df-4ed5-9b43-d248d53031b6" />  <br/>
+Each snapshot has been individully checked for completeness and quality of the sensor data. Number plates and faces have been manually anonymized using the drawing tool Krita.   <br/> 
+Thermal camera: S314SPX Mosaic Core  <br/>
+Stereo camera: ZED2 Stereo Camera  <br/>
+3D lidar: Ouster OS1 Lidar  <br/>
 
 #### Weather information
 <img width="783" height="270" alt="WinterThermalDataset_overview_weather_temperature" src="https://github.com/user-attachments/assets/de4c2266-e9b5-44f5-8541-dbce1e47e05c" />  
