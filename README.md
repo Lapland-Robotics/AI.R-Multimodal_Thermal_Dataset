@@ -16,18 +16,33 @@ year="2025"
 ```
 
 ## Description
-The dataset consists of snapshots of sensors of a mobile robot: Thermal camera, stereo camera and 3D-lidar. 
+The dataset consists of 696 snapshots of sensors of a mobile robot: Thermal camera, stereo camera and 3D-lidar. The data was collected in traffic adjacent spaces (e.g. parking spaces and sidewalks) by the sensors mounted on Lapland UAS' mobile winter robot "Snower" in March and April 2025 in a variety of light situations, winter weather and temperatures. See below for information on the sensor setup and the weather.
+
+
+#### Sensor information:
+<img width="514" height="306" alt="Multimodal_data_acquisition" src="https://github.com/user-attachments/assets/a77290ff-22df-4ed5-9b43-d248d53031b6" />  
+Each snapshot has been individully checked for completeness and quality of the sensor data. Number plates and faces have been manually anonymized using the drawing tool Krita. 
+Thermal camera: S314SPX Mosaic Core  
+Stereo camera: ZED2 Stereo Camera  
+3D lidar: Ouster OS1 Lidar  
+
+#### Weather information
+<img width="783" height="270" alt="WinterThermalDataset_overview_weather_temperature" src="https://github.com/user-attachments/assets/de4c2266-e9b5-44f5-8541-dbce1e47e05c" />  
+
+#### Example: RGB images cut to the view of the corresponding thermal images
+<img width="495" height="551" alt="subset_overview(1)" src="https://github.com/user-attachments/assets/2e65f07f-9658-4ac9-a116-75270423802d" />
 
 
 ## Orientation
 The raw collected data is in the "Multimodal Arctic Winter Thermal Image Dataset" folder. Each snapshot of data is named after the time of creation and contains four files, one thermal image (.png), two rgb images from the stereo camera (each .png) and a lidar pointcloud (.pcd):
-<img width="566" height="608" alt="image" src="https://github.com/user-attachments/assets/49aeecda-6fa9-4f2e-8582-b0d6f8dce23d" />
+<img width="396" height="425" alt="image" src="https://github.com/user-attachments/assets/49aeecda-6fa9-4f2e-8582-b0d6f8dce23d" />
 
 The dataset is fully labeled with bounding boxes, the labeled data is in the "bounding_boxes" folder with seperate sub-folders for images and labels.
 
 ## Bounding Boxes 
-The dataset was fully labeled with bounding boxes, since the aspect ratio and resolution of the raw RGB and thermal images is different, the RGB images were cut to the perspective of the thermal images before labeling, to ensure that the RGB and thermal images of the same scene include the same objects. Due to small differences in lenses and angles, 6 pictures were excluded in this step due to objects being obscured that were visible in the other image of the same scene. The labeling was accomplished in Roboflow (https://roboflow.com/), the AI Label Assistant was used as a starting point when applicable, but always needed refinement and correction by hand. 
-### List of Labels
+The images of the dataset were fully labeled with bounding boxes. Since the aspect ratio and resolution of the raw RGB and thermal images is different, the RGB images were cut to the perspective of the thermal images before labeling, to ensure that the RGB and thermal images of the same scene include the same objects. Due to small differences in lenses and angles, 6 pictures were excluded in this step due to objects being obscured that were visible in the other image of the same scene. The labeling was accomplished in Roboflow (https://roboflow.com/), the AI Label Assistant was used as a starting point when applicable, but always needed refinement and correction by hand. 
+
+#### List of Labels
 The labels are modeled after the YOLO labels, but not all of those objects exist in our dataset. Additional labels were added starting with #80.
 * 0 : person 
 * 1: bicycle 
