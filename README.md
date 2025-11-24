@@ -35,7 +35,7 @@ Stereo camera: ZED2 Stereo Camera  <br/>
 
 ## Orientation
 The raw collected data is in the "Multimodal Arctic Winter Thermal Image Dataset" folder. Each snapshot of data is named after the time of creation and contains four files, one thermal image (.png), two rgb images from the stereo camera (each .png) and a lidar pointcloud (.pcd):
-<img width="396" height="425" alt="image" src="https://github.com/user-attachments/assets/49aeecda-6fa9-4f2e-8582-b0d6f8dce23d" />
+<img width="396" height="425" alt="image" src="https://github.com/user-attachments/assets/49aeecda-6fa9-4f2e-8582-b0d6f8dce23d" /> <br/>
 
 The dataset is fully labeled with bounding boxes, the labeled data is in the "bounding_boxes" folder with seperate sub-folders for images and labels.
 
@@ -60,6 +60,10 @@ The labels are modeled after the YOLO labels, but not all of those objects exist
 * 82: other-vehicle
 * 83: bicyclist 
 * 84: motorcyclist
+
+## Evaluation
+In progress, will be updated soon. <br/>
+<img width="703" height="261" alt="image" src="https://github.com/user-attachments/assets/cc475b04-6695-40fe-9975-c8ec61e64db6" />
 
 
 
