@@ -1,5 +1,5 @@
 # AI.R-Multimodal_Thermal_Dataset
-Multimodal arctic winter dataset with 696 snapshots of thermal images, stereo RGB images and lidar point cloud. The additional data from the Sod5G autonomous driving test track offers another 213 pictures, although of a different scenery with the point cloud stemming from a different lidar than in the original dataset.
+Multimodal arctic winter dataset with 696 snapshots of thermal images, stereo RGB images and lidar point cloud. The additional data from the Sod5G autonomous driving test track offers another 213 snapshots, although of a different scenery with the point cloud stemming from a different lidar than in the original dataset.
 
 ![Arctic ai Robotics (2)](https://github.com/user-attachments/assets/f127dfc7-4975-4b46-91b3-2373ccc549fb)
 
