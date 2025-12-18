@@ -1,5 +1,5 @@
 # AI.R-Multimodal_Thermal_Dataset
-Multimodal arctic winter dataset with 696 snapshots of thermal images, stereo RGB images and lidar point cloud.
+Multimodal arctic winter dataset with 696 snapshots of thermal images, stereo RGB images and lidar point cloud. The additional data from the Sod5G autonomous driving test track offers another 213 pictures, although of a different scenery with the point cloud stemming from a different lidar than in the original dataset.
 
 ![Arctic ai Robotics (2)](https://github.com/user-attachments/assets/f127dfc7-4975-4b46-91b3-2373ccc549fb)
 
@@ -16,8 +16,19 @@ year="2025"
 ```
 
 ## Description
-The dataset consists of 696 snapshots of sensors of a mobile robot: Thermal camera, stereo camera and 3D-lidar. The data was collected in traffic adjacent spaces (e.g. parking spaces and sidewalks) by the sensors mounted on Lapland UAS' mobile winter robot "Snower" in March and April 2025 in a variety of light situations, winter weather and temperatures. See below for information on the sensor setup and the weather.
+The original dataset consists of 696 snapshots of sensors of a mobile robot: Thermal camera, stereo camera and 3D-lidar. The data was collected in traffic adjacent spaces (e.g. parking spaces and sidewalks) by the sensors mounted on Lapland UAS' mobile winter robot "Snower" in March and April 2025 in a variety of light situations, winter weather and temperatures. See below for information on the sensor setup and the weather. <br/>
+The additional 213 snapshots of FMI's autonomous driving test track Sod5G in Sodankylä also consist of the same thermal camera, stereo camera and general setup, but the point cloud is from a Robosense lidar instead of the Ouster OS1. The data was collected in 3 runs over a single day (09.12.2025) in arctic winter weather of -8 degree Celcius in different stages of low light and twilight over the short arctic winter daylight period. The scenery differs from the original dataset in that it depicts roads fully covered in snow, wintery forest and only few cars and people, which are more distinguishable against this monotone backdrop in the thermal camera images.
 
+## Orientation
+The original raw collected data is in the "Multimodal Arctic Winter Thermal Image Dataset" folder. Each snapshot of data is named after the time of creation and contains four files, one thermal image (.png), two rgb images from the stereo camera (each .png) and a lidar pointcloud (.pcd):
+<img width="396" height="425" alt="image" src="https://github.com/user-attachments/assets/49aeecda-6fa9-4f2e-8582-b0d6f8dce23d" /> <br/>
+More information on the original dataset below this section in "Multimodal Arctic Winter Thermal Image Dataset". <br/>
+
+The original dataset is fully labeled with bounding boxes, the labeled data is in the "bounding_boxes" folder with seperate sub-folders for images and labels. More explanation on the labels and how it was labeled below under "Bounding Boxes". <br/>
+
+The data from FMI's autonomous driving test track Sod5G is under "FMI_Sod5G_December_2025". The full dataset, under "full_fmi_dataset" is organized in the same structure than the original dataset, more information on this part of the data can be found below. Soon labeled data will be added. 
+
+## Multimodal Arctic Winter Thermal Image Dataset
 
 #### Sensor information:
 <img width="514" height="306" alt="Multimodal_data_acquisition" src="https://github.com/user-attachments/assets/a77290ff-22df-4ed5-9b43-d248d53031b6" />  <br/>
@@ -33,11 +44,17 @@ Stereo camera: ZED2 Stereo Camera  <br/>
 <img width="495" height="551" alt="subset_overview(1)" src="https://github.com/user-attachments/assets/2e65f07f-9658-4ac9-a116-75270423802d" />
 
 
-## Orientation
-The raw collected data is in the "Multimodal Arctic Winter Thermal Image Dataset" folder. Each snapshot of data is named after the time of creation and contains four files, one thermal image (.png), two rgb images from the stereo camera (each .png) and a lidar pointcloud (.pcd):
-<img width="396" height="425" alt="image" src="https://github.com/user-attachments/assets/49aeecda-6fa9-4f2e-8582-b0d6f8dce23d" /> <br/>
+## Multimodal Dataset of FMI's Sod5G Test Track
+The data differs from the original dataset in the lidar used to collect the point cloud data and in the general scenery and objects found at the test track. Therefore it was uploaded in its own folder structure rather than added to the original dataset. The data was collected in low light and twilight on the 09.12.2025 in cloudy -8 degree weather. The ground was fully covered in snow, including the test track road.
 
-The dataset is fully labeled with bounding boxes, the labeled data is in the "bounding_boxes" folder with seperate sub-folders for images and labels.
+#### Sensor information:
+The same stereo camera and thermal camera are used than in the original dataset (see descriptions above). 
+The lidar is not the same Ouster OS1 with 360 degree and 32 channels, but a Robosense lidar with 16 channels and only 180 degree view to the front of the robot. 
+
+#### Example
+<img width="658" height="307" alt="image" src="https://github.com/user-attachments/assets/d2046993-0b81-4a44-a467-700c515a8f0d" />
+
+
 
 ## Bounding Boxes 
 The images of the dataset were fully labeled with bounding boxes. Since the aspect ratio and resolution of the raw RGB and thermal images is different, the RGB images were cut to the perspective of the thermal images before labeling, to ensure that the RGB and thermal images of the same scene include the same objects. Due to small differences in lenses and angles, 6 pictures were excluded in this step due to objects being obscured that were visible in the other image of the same scene. The labeling was accomplished in Roboflow (https://roboflow.com/), the AI Label Assistant was used as a starting point when applicable, but always needed refinement and correction by hand. 
